@@ -11,6 +11,12 @@
         touch-action: none;
     }
 
+    @media (min-aspect-ratio: 9/16) {
+        body {
+            font-size: calc(100vh/20);
+        }
+    }
+
     .tiles {
         display: flex;
         flex-wrap: wrap;
@@ -43,6 +49,8 @@
 
     .none { background: white;}
     .ground { background: rgb(76, 81, 104); }
+    .no-robot { background: rgb(110, 110, 110); }
+    .inverted { background: rgb(226, 120, 253); }
     .platform::before {
         width: 0.45em;
         height: 1em;
@@ -109,8 +117,8 @@
         <div class="tile ground">ground</div>
         <div class="tile platform">platform</div>
         <div class="tile death">death</div>
-        <div class="tile begin">begin</div>
-        <div class="tile end">end</div>
+        <div class="tile no-robot">no-robot</div>
+        <div class="tile inverted">inverted</div>
         <div class="tile switch">switch</div>
         <div class="tile laser">laser</div>
     </div>
